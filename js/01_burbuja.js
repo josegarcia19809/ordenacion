@@ -4,9 +4,12 @@ const jugadores = [10, 9, 7, 4, 6, 5, 3, 8, 2, 1];
 const nElementos = jugadores.length - 1;
 let i = 0;
 let j = 0;
+let activo=false;
 llenar();
+
 btnOrdenar.addEventListener("click", function (e) {
     e.preventDefault();
+    activo=true;
     llenar();
     if (jugadores[j] > jugadores[j + 1]) {//si numero Actual > numero siguiente
         let aux = jugadores[j];
@@ -31,7 +34,7 @@ function llenar() {
         imagen.src = `img/j${jugador}.png`;
         imagen.width = 100;
         imagen.height = 300;
-        if (contador === j || contador === (j + 1)) {
+        if ((contador === j || contador === (j + 1)) && activo) {
             imagen.style.border = 'solid 4px red';
         } else {
             imagen.style.border = 'solid 1px black';
