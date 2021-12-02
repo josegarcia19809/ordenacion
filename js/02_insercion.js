@@ -1,5 +1,5 @@
 const btnOrdenar = document.getElementById("btn_ordenar");
-const jugadores = [10, 9, 7, 4, 6, 5, 3, 8, 2, 1];
+const jugadores = [8, 9, 7, 4, 6, 5, 3, 10, 2, 1];
 const nElementos = jugadores.length - 1;
 let i = 1;
 let activo = true;
