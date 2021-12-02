@@ -11,7 +11,7 @@ llenar();
 
 btnOrdenar.addEventListener("click", function (e) {
     e.preventDefault();
-    if (i >= nElementos+2) {
+    if (i >= nElementos + 2) {
         activo = false;
     } else {
         activo = true;
@@ -48,7 +48,7 @@ function llenar() {
         } else {
             imagen.style.border = 'solid 1px black';
         }
-        if (!activo)return;
+        if (!activo) return;
         divJugadores.appendChild(imagen);
         contador++;
     });
