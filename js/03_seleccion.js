@@ -13,7 +13,7 @@ btnOrdenar.addEventListener("click", function (e) {
     aux = jugadores[i];
     min = i;
     j = i + 1;
-    llenar();
+
     while (j <= nElementos) {
         if (jugadores[j] < aux) {
             aux = jugadores[j];
@@ -21,6 +21,7 @@ btnOrdenar.addEventListener("click", function (e) {
         }
         j++;
     }
+    llenar();
     jugadores[min] = jugadores[i];
     jugadores[i] = aux;
     i++;
@@ -35,7 +36,7 @@ function llenar() {
         imagen.src = `img/j${jugador}.png`;
         imagen.width = 100;
         imagen.height = 300;
-        if ((contador === (min)) && activo) {
+        if ((contador === min || contador===i) && activo) {
             imagen.style.border = 'solid 4px red';
         } else {
             imagen.style.border = 'solid 1px black';
