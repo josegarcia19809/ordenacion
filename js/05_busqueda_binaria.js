@@ -56,7 +56,7 @@ function llenar() {
         if (contador < bajo || contador > alto) {
             casilla.style.textDecoration = "line-through";
             casilla.style.backgroundColor = "#34495e";
-            casilla.style.color = "#ffffff";
+            casilla.style.color = "#bdc3c7";
         } else {
             casilla.style.backgroundColor = "#2980b9";
             casilla.style.color = "#ffffff";
